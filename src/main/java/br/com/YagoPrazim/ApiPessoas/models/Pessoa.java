@@ -1,8 +1,6 @@
 package br.com.YagoPrazim.ApiPessoas.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -21,7 +19,7 @@ public class Pessoa {
     @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true, length = 14)
     private String cpf;
 
     @Column(nullable = false, unique = true)
